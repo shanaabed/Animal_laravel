@@ -64,18 +64,9 @@ class AnimalController extends Controller
     }
 
 
-    public function destroy($id, animal $animal)
+    public function destroy( animal $animal)
     {
-        // $animal -> delete ();
-        //return redirect () -> route ('index');
-        Animal::destroy(array('id',$id));
         $animal -> delete ();
-        return redirect () -> route ('index');
-        //if(Animal::destroy($id)) {
-        // return redirect('animal.index')->with('success', ' Successfully deleted!');
-        //  } else {
-        //return redirect('animal.index')->with('error', 'Please try again!');
-        // }
-
+        return redirect () -> route ('animal.index');
     }
 }

@@ -26,13 +26,12 @@
                     <td>{{$animal->description}}</td>
                     <td>{{$animal->created_at}}</td>
 
-                    <td> <a href="animal/{{$animal->id}}"class="btn btn-default">Show </a></td>
+                    <td> <a href="animal/{{$animal->id}}" class="btn btn-default">Show </a></td>
 
 
                     <td> <a href="/animal/{{$animal->id}}/edit" class="btn btn-default">Edit </a></td>
 
-
-                    <form class="inline" method="post" action="{{ $animal->id }}">
+                    <form class="inline" method="post" action="/animal/{{$animal-> id}}">
                         @method ('DELETE')
                         @csrf
                         <td> <input type="submit" value="Delete" class="btn btn-danger btn-block" onclick="return confirm('Are you sure you want to delete?')"> </td>
