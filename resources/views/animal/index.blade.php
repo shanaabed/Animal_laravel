@@ -9,35 +9,27 @@
 @endsection
 
 @section('content')
-
-    <div class="flex-center position-ref full-height">
-        <table>
-            <tr>
-                <td>Id</td>
-                <td>Name</td>
-                <td>Description</td>
-                <td>Created At</td>
-            </tr>
-
-            @foreach($animals as $animal)
+    <div class="w-2/3 mx-auto">
+        <div class="bg-white shadow-md rounded my-6">
+            <table class="text-left w-full border-collapse">
+                <thead>
                 <tr>
-                    <td>{{$animal->id}}</td>
-                    <td>{{$animal->name}}</td>
-                    <td>{{$animal->description}}</td>
-                    <td>{{$animal->created_at}}</td>
-
-                    <td> <a href="animal/{{$animal->id}}" class="btn btn-default">Show </a></td>
-
-
-                    <td> <a href="/animal/{{$animal->id}}/edit" class="btn btn-default">Edit </a></td>
-
-                    <form class="inline" method="post" action="/animal/{{$animal-> id}}">
-                        @method ('DELETE')
-                        @csrf
-                        <td> <input type="submit" value="Delete" class="btn btn-danger btn-block" onclick="return confirm('Are you sure you want to delete?')"> </td>
-                    </form>
+                    <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Animals</th>
+                    <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Created By</th>
+                    <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Actions</th>
                 </tr>
-            @endforeach
-        </table>
-    </div>
+                </thead>
+                <body>
+                @foreach($animals as $animal)
+                    <tr class="hover:bg-grey-lighter">
+                        <td class="py-4 px-6 border-b border-grey-light">{{$animal->name}}</td>
+                        <td class="py-4 px-6 border-b border-grey-light">Created by {{$animal->user->name}}</td>
+                        <td class="py-4 px-6 border-b border-grey-light">
+                            <a href="/animal/{{$animal->id}}/edit" class="text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-green hover:bg-green-dark">Edit</a>
+                            <a href="animal/{{$animal->id}}" class="text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark">View</a>
+                        </td>
+                    </tr>
+                @endforeach
+                </body>
+            </table>
 @endsection

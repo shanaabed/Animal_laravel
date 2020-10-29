@@ -13,12 +13,30 @@
 @endsection
 
 @section('content')
+    <section class="py-12">
+        <div class="container mx-auto">
+            <div>
+                <h1 class="text-2xl font-black text-gray-900 pb-6 px-6 md:px-12">
+                    {{$animal->name}}
+                </h1>
 
-    <div class=" central w-1/2 text-xl bg-blue-100 px-4 py-4 border rounded border-gray-500">
-        <h1>{{$animal->name}}</h1>
-        <div> {{$animal->address}}</div>
-        <small>written on{{$animal->created_at}}</small>
-    </div>
-
+                <div class="flex flex-wrap px-6">
+                    <div class="w-full lg:w-1/2   md:px-4 lg:px-6 py-5">
+                        <div class="">
+                            <p>{{$animal->description}}</p>
+                        </div>
+                        <small>written on{{$animal->created_at}}  Created by {{$animal->user->name}}</small>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a href="/animal/{{$animal->id}}/edit" class="btn btn-default">Edit </a>
+                <form class="inline" method="post" action="/animal/{{$animal-> id}}">
+                    @method ('DELETE')
+                    @csrf
+                    <input type="submit" value="Delete" class="btn btn-danger btn-block" onclick="return confirm('Are you sure you want to delete?')">
+                </form>
+            </div>
+        </div>
 
 @endsection

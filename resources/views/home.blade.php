@@ -14,13 +14,34 @@
 
             <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
                 Dashboard
-            </header>
-
-            <div class="w-full p-6">
-                <p class="text-gray-700">
+                <p class="text-gray-700" align="center">
                     You are logged in!
                 </p>
-            </div>
+
+            </header>
+            @if(count($animals)>0)
+            <table class="text-left w-full border-collapse">
+                <thead>
+                <tr>
+                    <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Animals</th>
+                    <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">Actions</th>
+                </tr>
+                </thead>
+                <body>
+                @foreach($animals as $animal)
+                    <tr class="hover:bg-grey-lighter">
+                        <td class="py-4 px-6 border-b border-grey-light">{{$animal->name}}</td>
+                        <td class="py-4 px-6 border-b border-grey-light">
+                            <a href="/animal/{{$animal->id}}/edit" class="text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-green hover:bg-green-dark">Edit</a>
+                            <a href="animal/{{$animal->id}}" class="text-grey-lighter font-bold py-1 px-3 rounded text-xs bg-blue hover:bg-blue-dark">View</a>
+                        </td>
+                    </tr>
+                @endforeach
+                </body>
+            </table>
+            @else
+                <p>No animals have been created by you.</p>
+            @endif
         </section>
     </div>
 </main>

@@ -14,4 +14,8 @@ class Animal extends Model
     //timestamps should be true by default.
     protected $fillable = ['name','description'];
     public $timestamps = true;
+
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 }

@@ -18,7 +18,7 @@
 
             <tr>
                 <td>Description</td>
-                <td><input type="textarea" name="description" value="{{$animal->description}}"></td>
+                <td><input type="textarea"  rows="4" cols="50" name="description" value="{{$animal->description}}"></td>
             </tr>
             @method ('PATCH')
 

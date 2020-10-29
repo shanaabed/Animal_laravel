@@ -27,6 +27,8 @@ class AnimalController extends Controller
         // return $request->input('name');
         $res = new Animal;
         $res->name=$request->input('name');
+        $res->description=$request->input('description');
+        $res->user_id=auth()->user()->id;
         $res->save();
         $request->session()->flash('msg', 'Data subbmited');
         return redirect('animal');
