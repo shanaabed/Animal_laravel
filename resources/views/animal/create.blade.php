@@ -19,7 +19,7 @@
 
             <tr>
                 <td>Description</td>
-                <td><input type="textarea" name="description"></td>
+                <td><textarea class="form-textarea mt-1 block w-full" rows="3" cols="50" name="description" ></textarea></td>
             </tr>
             <tr>
                 <td></td>

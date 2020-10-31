@@ -9,9 +9,9 @@ class Animal extends Model
 {
     use HasFactory;
     protected $table = 'animals';
-    //primary key
+
     protected $primaryKey = 'id';
-    //timestamps should be true by default.
+
     protected $fillable = ['name','description'];
     public $timestamps = true;
 

@@ -25,7 +25,7 @@
                         <div class="">
                             <p>{{$animal->description}}</p>
                         </div>
-                        <small>written on{{$animal->created_at}}  Created by {{$animal->user->name}}</small>
+                        <small>written on{{$animal->created_at}} </small>
                     </div>
                 </div>
             </div>

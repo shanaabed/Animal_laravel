@@ -26,6 +26,7 @@
                 </a>
             </div>
             <nav class="space-x-4 text-gray-300 text-sm sm:text-base">
+                <a class="nav-link"href="/home" >Dashboard</a>
                 <a class="nav-link"href="/animal" >Animals</a>
                 <a class="nav-link" href="/animal/create">Create</a>
             </nav>

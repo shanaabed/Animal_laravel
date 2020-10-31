@@ -22,9 +22,8 @@
     <list default="true" id="f5d6c938-b1ed-49ca-a794-3e77e746eff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AnimalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AnimalController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Animal.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Animal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/animal/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/animal/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/animal/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/animal/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/animal/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/animal/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/animal/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/animal/show.blade.php" afterDir="false" />
@@ -187,7 +186,12 @@
       <workItem from="1603834716608" duration="793000" />
       <workItem from="1603880113735" duration="3595000" />
       <workItem from="1603884656904" duration="8724000" />
-      <workItem from="1603973099701" duration="9167000" />
+      <workItem from="1603973099701" duration="13352000" />
+      <workItem from="1604049158356" duration="3504000" />
+      <workItem from="1604074608973" duration="4697000" />
+      <workItem from="1604152390170" duration="939000" />
+      <workItem from="1604157087658" duration="7299000" />
+      <workItem from="1604176665613" duration="890000" />
     </task>
     <task id="LOCAL-00001" summary="Destroy function working.">
       <created>1603885854054</created>
@@ -196,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603885854055</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Link the Animal table to the Users table.">
+      <created>1603999158107</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603999158184</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,16 +227,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Destroy function working." />
-    <option name="LAST_COMMIT_MESSAGE" value="Destroy function working." />
+    <MESSAGE value="Link the Animal table to the Users table." />
+    <option name="LAST_COMMIT_MESSAGE" value="Link the Animal table to the Users table." />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603815921710">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1603815921710" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1603883914468">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1604067360457">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1603883914468" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1604067360457" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1604180046548">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1604180046548" />
   </component>
 </project>
